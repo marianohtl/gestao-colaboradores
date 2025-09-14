@@ -1641,3 +1641,128 @@ Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-valid
 2025-09-14T19:57:48.161-03:00  INFO 20328 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-09-14T19:57:48.162-03:00  INFO 20328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-09-14T19:57:48.163-03:00  INFO 20328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-14T20:18:47.611-03:00  INFO 22367 --- [main] b.c.g.GestaoColaboradoresApiApplication  : Starting GestaoColaboradoresApiApplication using Java 23.0.2 with PID 22367 (/home/thalita/Documents/Projects/Java/gestao-colaboradores/target/classes started by thalita in /home/thalita/Documents/Projects/Java/gestao-colaboradores)
+2025-09-14T20:18:47.612-03:00  INFO 22367 --- [main] b.c.g.GestaoColaboradoresApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-09-14T20:18:47.858-03:00  INFO 22367 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-14T20:18:47.877-03:00  INFO 22367 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
+2025-09-14T20:18:48.043-03:00  INFO 22367 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2025-09-14T20:18:48.049-03:00  INFO 22367 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-14T20:18:48.049-03:00  INFO 22367 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-14T20:18:48.065-03:00  INFO 22367 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-14T20:18:48.065-03:00  INFO 22367 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 432 ms
+2025-09-14T20:18:48.168-03:00  INFO 22367 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-14T20:18:48.232-03:00  INFO 22367 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@138f0661
+2025-09-14T20:18:48.233-03:00  INFO 22367 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-14T20:18:48.246-03:00  INFO 22367 --- [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/gestaocolaboradores (PostgreSQL 17.6)
+2025-09-14T20:18:48.259-03:00  INFO 22367 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.005s)
+2025-09-14T20:18:48.260-03:00  WARN 22367 --- [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2025-09-14T20:18:48.279-03:00  INFO 22367 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2025-09-14T20:18:48.280-03:00  INFO 22367 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2025-09-14T20:18:48.315-03:00  INFO 22367 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-14T20:18:48.331-03:00  INFO 22367 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-14T20:18:48.344-03:00  INFO 22367 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-14T20:18:48.439-03:00  INFO 22367 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-14T20:18:48.457-03:00  WARN 22367 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-14T20:18:48.462-03:00  INFO 22367 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-14T20:18:48.741-03:00  INFO 22367 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-14T20:18:48.754-03:00  INFO 22367 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-14T20:18:48.850-03:00  INFO 22367 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-14T20:18:48.871-03:00  WARN 22367 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-14T20:18:48.999-03:00  INFO 22367 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2025-09-14T20:18:49.003-03:00  INFO 22367 --- [main] b.c.g.GestaoColaboradoresApiApplication  : Started GestaoColaboradoresApiApplication in 1.577 seconds (process running for 1.796)
+2025-09-14T20:19:05.023-03:00  INFO 22367 --- [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-14T20:19:05.023-03:00  INFO 22367 --- [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-14T20:19:05.024-03:00  INFO 22367 --- [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-09-14T20:20:31.961-03:00  INFO 22367 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-14T20:20:31.963-03:00  INFO 22367 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-14T20:20:31.967-03:00  INFO 22367 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-14T20:20:31.970-03:00  INFO 22367 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-14T20:20:31.972-03:00  INFO 22367 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-14T20:24:56.941-03:00  INFO 23807 --- [main] b.c.g.GestaoColaboradoresApiApplication  : Starting GestaoColaboradoresApiApplication using Java 23.0.2 with PID 23807 (/home/thalita/Documents/Projects/Java/gestao-colaboradores/target/classes started by thalita in /home/thalita/Documents/Projects/Java/gestao-colaboradores)
+2025-09-14T20:24:56.941-03:00  INFO 23807 --- [main] b.c.g.GestaoColaboradoresApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-09-14T20:24:57.177-03:00  INFO 23807 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-14T20:24:57.196-03:00  INFO 23807 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
+2025-09-14T20:24:57.359-03:00  INFO 23807 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2025-09-14T20:24:57.365-03:00  INFO 23807 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-14T20:24:57.365-03:00  INFO 23807 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-14T20:24:57.379-03:00  INFO 23807 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-14T20:24:57.379-03:00  INFO 23807 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 418 ms
+2025-09-14T20:24:57.482-03:00  INFO 23807 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-14T20:24:57.547-03:00  INFO 23807 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@544e3679
+2025-09-14T20:24:57.548-03:00  INFO 23807 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-14T20:24:57.560-03:00  INFO 23807 --- [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/gestaocolaboradores (PostgreSQL 17.6)
+2025-09-14T20:24:57.575-03:00  INFO 23807 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.007s)
+2025-09-14T20:24:57.575-03:00  WARN 23807 --- [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2025-09-14T20:24:57.593-03:00  INFO 23807 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2025-09-14T20:24:57.594-03:00  INFO 23807 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2025-09-14T20:24:57.628-03:00  INFO 23807 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-14T20:24:57.644-03:00  INFO 23807 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-14T20:24:57.656-03:00  INFO 23807 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-14T20:24:57.749-03:00  INFO 23807 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-14T20:24:57.767-03:00  WARN 23807 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-14T20:24:57.772-03:00  INFO 23807 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-14T20:24:58.049-03:00  INFO 23807 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-14T20:24:58.060-03:00  INFO 23807 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-14T20:24:58.155-03:00  INFO 23807 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-14T20:24:58.176-03:00  WARN 23807 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-14T20:24:58.305-03:00  INFO 23807 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2025-09-14T20:24:58.309-03:00  INFO 23807 --- [main] b.c.g.GestaoColaboradoresApiApplication  : Started GestaoColaboradoresApiApplication in 1.553 seconds (process running for 1.775)
+2025-09-14T20:25:41.005-03:00  INFO 23807 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-14T20:25:41.007-03:00  INFO 23807 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-14T20:25:41.010-03:00  INFO 23807 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-14T20:25:41.011-03:00  INFO 23807 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-14T20:25:41.014-03:00  INFO 23807 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-14T20:25:44.615-03:00  INFO 24322 --- [main] b.c.g.GestaoColaboradoresApiApplication  : Starting GestaoColaboradoresApiApplication using Java 23.0.2 with PID 24322 (/home/thalita/Documents/Projects/Java/gestao-colaboradores/target/classes started by thalita in /home/thalita/Documents/Projects/Java/gestao-colaboradores)
+2025-09-14T20:25:44.615-03:00  INFO 24322 --- [main] b.c.g.GestaoColaboradoresApiApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-09-14T20:25:44.942-03:00  INFO 24322 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-14T20:25:44.961-03:00  INFO 24322 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2025-09-14T20:25:45.183-03:00  INFO 24322 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 5000 (http)
+2025-09-14T20:25:45.190-03:00  INFO 24322 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-14T20:25:45.190-03:00  INFO 24322 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-14T20:25:45.210-03:00  INFO 24322 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-14T20:25:45.210-03:00  INFO 24322 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 571 ms
+2025-09-14T20:25:45.340-03:00  INFO 24322 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-14T20:25:45.402-03:00  INFO 24322 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5f0f70c7
+2025-09-14T20:25:45.402-03:00  INFO 24322 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-14T20:25:45.414-03:00  INFO 24322 --- [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/gestaocolaboradores (PostgreSQL 17.6)
+2025-09-14T20:25:45.428-03:00  INFO 24322 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.006s)
+2025-09-14T20:25:45.429-03:00  WARN 24322 --- [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2025-09-14T20:25:45.447-03:00  INFO 24322 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2025-09-14T20:25:45.449-03:00  INFO 24322 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2025-09-14T20:25:45.482-03:00  INFO 24322 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-14T20:25:45.497-03:00  INFO 24322 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-14T20:25:45.508-03:00  INFO 24322 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-14T20:25:45.602-03:00  INFO 24322 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-14T20:25:45.621-03:00  WARN 24322 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-14T20:25:45.627-03:00  INFO 24322 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-14T20:25:45.916-03:00  INFO 24322 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-14T20:25:45.933-03:00  INFO 24322 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-14T20:25:46.022-03:00  INFO 24322 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-14T20:25:46.083-03:00  WARN 24322 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-14T20:25:46.254-03:00  INFO 24322 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 5000 (http) with context path '/'
+2025-09-14T20:25:46.259-03:00  INFO 24322 --- [main] b.c.g.GestaoColaboradoresApiApplication  : Started GestaoColaboradoresApiApplication in 1.839 seconds (process running for 2.076)
+2025-09-14T20:25:46.484-03:00  INFO 24322 --- [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-14T20:25:46.484-03:00  INFO 24322 --- [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-14T20:25:46.485-03:00  INFO 24322 --- [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-14T20:26:06.866-03:00  INFO 24322 --- [http-nio-5000-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 47 ms
