@@ -1,4 +1,4 @@
-package br.com.testebackendPostgreSQL.com.Flyway.ou.Liquibase.gestao_colaboradores_api;
+package br.com.gestao_colaboradores_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
