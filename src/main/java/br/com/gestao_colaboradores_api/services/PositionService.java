@@ -2,6 +2,7 @@ package br.com.gestao_colaboradores_api.services;
 
 import br.com.gestao_colaboradores_api.dtos.PositionRequest;
 import br.com.gestao_colaboradores_api.dtos.PositionResponse;
+import br.com.gestao_colaboradores_api.exceptions.DuplicateResourceException;
 import br.com.gestao_colaboradores_api.models.Position;
 import br.com.gestao_colaboradores_api.repositories.PositionRepository;
 import org.springframework.stereotype.Service;
@@ -34,24 +35,24 @@ public class PositionService {
 
     public String getPositionTitle(UUID positionId) {
         if (positionId == null) {
-            return "Cargo não informado";
+            return null;
         }
 
         return positionRepository.findById(positionId)
                 .map(Position::getTitle)
-                .orElse("Cargo não encontrado");
+                .orElse(null);
     }
 
     private void validatePositionTitle(String title) {
         if (title == null || title.trim().isEmpty()) {
-            throw new RuntimeException("Título do cargo é obrigatório");
+            throw new IllegalArgumentException("Título do cargo é obrigatório");
         }
 
         if (positionRepository.existsByTitle(title)) {
-            throw new RuntimeException("Já existe um cargo com o título: " + title);
+            throw new DuplicateResourceException("Cargo", title);
         }
     }
-    private PositionResponse toResponse(Position position) {
+    protected PositionResponse toResponse(Position position) {
         return new PositionResponse(
                 position.getId(),
                 position.getTitle()

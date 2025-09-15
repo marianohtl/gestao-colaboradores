@@ -37,12 +37,12 @@ public class DepartmentService {
 
     public String getDepartmentName(UUID departmentId) {
         if (departmentId == null) {
-            return "Departamento não informado";
+            return null;
         }
 
         return departmentRepository.findById(departmentId)
                 .map(Department::getName)
-                .orElse("Departamento não encontrado");
+                .orElse(null);
     }
 
     private void validateDepartmentName(String name) {
@@ -55,7 +55,7 @@ public class DepartmentService {
         }
     }
 
-    private DepartmentResponse toResponse(Department department) {
+    protected DepartmentResponse toResponse(Department department) {
         return new DepartmentResponse(
                 department.getId(),
                 department.getName()

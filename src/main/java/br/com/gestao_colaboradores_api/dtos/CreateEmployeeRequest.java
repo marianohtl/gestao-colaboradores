@@ -7,8 +7,8 @@ import jakarta.validation.constraints.NotNull;
 import java.util.UUID;
 
 public record CreateEmployeeRequest(
-        @NotBlank String name,
-        @NotBlank @Email String email,
-        @NotNull UUID departmentId,
-        @NotNull UUID positionId
+        @NotBlank(message = "Nome do colaborador é obrigatório") String name,
+        @NotBlank(message = "E-mail do colaborador é obrigatório") @Email(message = "Deve conter um endereço de e-mail válido.") String email,
+        @NotNull(message = "Id do departamento é obrigatório") UUID departmentId,
+        @NotNull(message = "Id do cargo é obrigatório") UUID positionId
 ) {}

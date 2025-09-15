@@ -6,6 +6,7 @@ import br.com.gestao_colaboradores_api.dtos.enums.EmployeeStatus;
 import br.com.gestao_colaboradores_api.exceptions.ResourceNotFoundException;
 import br.com.gestao_colaboradores_api.models.Employee;
 import br.com.gestao_colaboradores_api.repositories.EmployeeRepository;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -28,6 +29,9 @@ public class EmployeeService {
     }
 
     public EmployeeResponse createEmployee(CreateEmployeeRequest request) {
+        validateDepartment(request.departmentId());
+        validatePosition(request.positionId());
+
         Employee employee = new Employee();
         employee.setName(request.name());
         employee.setEmail(request.email());
@@ -59,7 +63,7 @@ public class EmployeeService {
         employeeRepository.deleteById(id);
     }
 
-    private EmployeeResponse toResponse(Employee employee) {
+    protected EmployeeResponse toResponse(Employee employee) {
         String departmentName = departmentService.getDepartmentName(employee.getDepartmentId());
         String positionTitle = positionService.getPositionTitle(employee.getPositionId());
 
@@ -72,5 +76,17 @@ public class EmployeeService {
                 employee.getStatus().name(),
                 employee.getCreatedAt()
         );
+    }
+    private void validatePosition(@NotNull(message = "Id do cargo é obrigatório") UUID uuid) {
+        String position = positionService.getPositionTitle(uuid);
+        if(position == null)
+            throw new ResourceNotFoundException("Cargo", uuid);
+    }
+
+    private void validateDepartment(@NotNull(message = "Id do departamento é obrigatório") UUID uuid) {
+        String department = departmentService.getDepartmentName(uuid);
+        if(department == null)
+            throw new ResourceNotFoundException("Departamento", uuid);
+
     }
 }

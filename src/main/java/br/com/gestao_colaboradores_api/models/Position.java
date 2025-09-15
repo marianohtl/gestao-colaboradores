@@ -15,6 +15,13 @@ public class Position {
     @Column(nullable = false, unique = true)
     private String title;
 
+    public Position() {}
+
+    public Position(UUID id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
     public UUID getId() {
         return id;
     }
