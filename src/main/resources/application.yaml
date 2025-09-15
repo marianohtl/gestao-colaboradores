@@ -50,6 +50,7 @@ spring:
       tags-sorter: alpha
       operations-sorter: alpha
       enabled: true
+    packages-to-exclude: br.com.gestao_colaboradores_api.exceptions
 
 # Logging
 logging:

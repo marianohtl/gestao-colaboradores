@@ -1,0 +1,14 @@
+{
+  "name": "gestao_colaboradores_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marianohtl/gestao-colaboradores.git"
+  },
+  "private": true
+}

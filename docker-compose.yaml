@@ -1,27 +1,49 @@
-# Use postgres/example user/password credentials
-
 services:
-
-  db:
+  app:
+    build: .
+    container_name: gestao_colaboradores_app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/gestaocolaboradores
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_JPA_HIBERNATE_DDL_AUTO: validate
+      SPRING_FLYWAY_ENABLED: "true"
+      SPRING_FLYWAY_BASELINE_ON_MIGRATE: "true"
+    ports:
+      - "5000:5000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - app-network
+  postgres:
     image: postgres
-    restart: always
-    # set shared memory limit when using docker compose
-    shm_size: 128mb
-    # or set shared memory limit when deploy via swarm stack
-    #volumes:
-    #  - type: tmpfs
-    #    target: /dev/shm
-    #    tmpfs:
-    #      size: 134217728 # 128*2^20 bytes = 128Mb
+    container_name: gestao_colaboradores_db
     environment:
       POSTGRES_DB: gestaocolaboradores
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
     ports:
       - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - app-network
 
   adminer:
     image: adminer
     restart: always
     ports:
       - "8080:8080"
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:
+    driver: bridge
